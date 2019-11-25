@@ -15,6 +15,7 @@ example shows a few features of the :meth:`~.axes.Axes.streamplot` function:
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
+import matplotlib.text as text
 
 w = 3
 Y, X = np.mgrid[-w:w:100j, -w:w:100j]

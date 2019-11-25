@@ -128,8 +128,9 @@ plt.title('Easy as 1, 2, 3')  # subplot 211 title
 
 # <codecell> plot f(x)
 # plot y = sin(x)
+import numpy as np
 fig, axes = plt.subplots(1, 1)
-x = [-np.pi, -np.pi/2, -np.pi/3, -np.pi/4, 0, np.pi/4, np.pi/3, np.pi/2, np.pi]
+x = np.arange(-np.pi, np.pi, 0.2)
 y = np.sin(x)
 z = np.cos(x)
 axes.plot(x, y)
