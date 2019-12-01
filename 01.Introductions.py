@@ -93,6 +93,8 @@ ax_lst[0, 0].set_title("this is the first axis")
 ax_lst[0, 1].set_title("this is the second axis")
 ax_lst[1, 0].set_title("this is the third axis")
 ax_lst[1, 1].set_title("this is the fourth axis")
+plt.tight_layout()
+plt.show()
 
 # <codecell> First create some toy data:
 x = np.linspace(0, 2*np.pi, 400)
@@ -102,18 +104,21 @@ y = np.sin(x**2)
 fig, ax = plt.subplots()
 ax.plot(x, y)
 ax.set_title('Simple plot')
-
+plt.tight_layout()
+plt.show()
 # <codecell> two subplots and unpacks the output array immediately
 f, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
 ax1.plot(x, y)
 ax1.set_title('Sharing Y axis')
 ax2.scatter(x, y)
-
+plt.tight_layout()
+plt.show()
 # <codecell> four polar axes, and accesses them through the returned array
 fig, axes = plt.subplots(2, 2, subplot_kw=dict(polar=True))
 axes[0, 0].plot(x, y)
 axes[1, 1].scatter(x, y)
-
+plt.tight_layout()
+plt.show()
 # <codecell> share X col
 # Share a X axis with each column of subplots
 fig, ax_lst = plt.subplots(2, 2, sharex='col')

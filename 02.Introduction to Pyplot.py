@@ -325,3 +325,22 @@ fig.legend((l3, l4), ('Line 3', 'Line 4'), 'upper right')
 
 plt.tight_layout()
 plt.show()
+
+# <codecell> Bode plot
+from scipy import signal
+from lcapy import Circuit, s, j, omega
+from matplotlib.pyplot import savefig
+from numpy import logspace
+from sympy import *
+import matplotlib.pyplot as plt
+
+sys = signal.TransferFunction([1600000], [3,  3206400, 2562560000])
+w, mag, phase = signal.bode(sys)
+plt.figure()
+plt.semilogx(w, mag)    # Bode magnitude plot
+plt.grid()
+plt.figure()
+plt.semilogx(w, phase)  # Bode phase plot
+plt.grid()
+plt.tight_layout()
+plt.show()
